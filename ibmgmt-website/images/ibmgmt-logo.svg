@@ -1,0 +1,16 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- "I" as triangle -->
+  <polygon points="40,20 60,20 50,70" fill="#F2F2F2"/>
+  
+  <!-- "B" as two overlapping triangles -->
+  <polygon points="80,20 100,50 80,80" fill="#F2F2F2"/>
+  <polygon points="100,50 120,20 120,80" fill="#F2F2F2"/>
+  
+  <!-- "M" as three vertical lines -->
+  <rect x="140" y="20" width="6" height="60" fill="#F2F2F2"/>
+  <rect x="150" y="20" width="6" height="60" fill="#F2F2F2"/>
+  <rect x="160" y="20" width="6" height="60" fill="#F2F2F2"/>
+
+  <!-- Optional "G" as curved line -->
+  <path d="M100,110 A20,20 0 1,1 120,130" stroke="#F2F2F2" stroke-width="3" fill="none"/>
+</svg>

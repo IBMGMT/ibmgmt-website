@@ -1,0 +1,74 @@
+/* Global Styles */
+body {
+  margin: 0;
+  height: 100vh;
+  background-color: #002B5C; /* Dark Navy Blue */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.container {
+  position: relative;
+  width: 300px;
+  height: 300px;
+}
+
+/* Rotating Lines Background */
+.lines {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 250px;
+  height: 250px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.line {
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: #fff;
+  transform-origin: center;
+  animation: rotate 8s linear infinite;
+}
+
+.line:nth-child(1) { transform: rotate(45deg); }
+.line:nth-child(2) { transform: rotate(90deg); }
+.line:nth-child(3) { transform: rotate(135deg); }
+
+@keyframes rotate {
+  100% { transform: rotate(360deg); }
+}
+
+/* Logo Animation */
+.logo {
+  width: 200px;
+  height: 200px;
+  background-image: url('images/ibmgmt-logo.svg');
+  background-size: cover;
+  opacity: 0;
+  transform: scale(0);
+  animation: reveal 1s forwards;
+}
+
+.logo:hover {
+  animation: pulse 0.8s ease-out;
+  filter: hue-rotate(180deg);
+}
+
+@keyframes reveal {
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
